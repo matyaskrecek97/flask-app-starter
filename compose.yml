@@ -1,12 +1,10 @@
-version: "3.8"
-
 services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - "5001:5000"
     volumes:
       - ./app:/app
     environment:
       FLASK_APP: app.py
-      FLASK_RUN_HOST: 0.0.0.0
+      FLASK_ENV: development
